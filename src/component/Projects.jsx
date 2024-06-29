@@ -2,8 +2,6 @@ import { Col, Container, Nav, Row, Tab } from 'react-bootstrap'
 import { ProjectsCard } from './ProjectsCard'
 import colorSharp2 from '../assets/img/color-sharp2.png'
 import projImg1 from '../assets/img/project-img1.png'
-import projImg2 from '../assets/img/project-img2.png'
-import projImg3 from '../assets/img/project-img3.png'
 export const Projects = () => {
     const projects = [
         {
@@ -14,12 +12,7 @@ export const Projects = () => {
         {
             title: 'It Could Be Your  Project',
             description: 'It Could Be Your Project',
-            imgUrl: projImg2,
-        },
-        {
-            title: 'It Could Be Your  Project',
-            description: 'It Could Be Your Project',
-            imgUrl: projImg3,
+            imgUrl: projImg1,
         },
         {
             title: 'It Could Be Your  Project',
@@ -29,12 +22,17 @@ export const Projects = () => {
         {
             title: 'It Could Be Your  Project',
             description: 'It Could Be Your Project',
-            imgUrl: projImg2,
+            imgUrl: projImg1,
         },
         {
             title: 'It Could Be Your  Project',
             description: 'It Could Be Your Project',
-            imgUrl: projImg3,
+            imgUrl: projImg1,
+        },
+        {
+            title: 'It Could Be Your  Project',
+            description: 'It Could Be Your Project',
+            imgUrl: projImg1,
         },
     ]
 
@@ -45,11 +43,8 @@ export const Projects = () => {
                     <Col>
                         <h2>Projects</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dolore earum ut, nostrum, accusamus sequi odio
-                            veritatis quibusdam exercitationem omnis, dolorum
-                            animi vitae adipisci commodi distinctio nemo nobis
-                            enim velit! Amet?
+                            The projects I have worked on, may include yours if
+                            you choose to engage my services.
                         </p>
                         <Tab.Container
                             id="projects-tabs"

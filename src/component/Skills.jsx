@@ -35,12 +35,8 @@ export const Skills = () => {
                         <div className="skill-bx">
                             <h2>Skills</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Delectus ratione, eos nesciunt
-                                impedit commodi ducimus laboriosam tempora
-                                reprehenderit deserunt asperiores illo. Mollitia
-                                earum minus iusto magnam voluptatum ad
-                                repudiandae dolorem.
+                                My expertise in the field might be beneficial
+                                for your website creation.
                             </p>
                             <Carousel
                                 responsive={responsive}
@@ -92,7 +88,6 @@ export const Skills = () => {
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-left" src={colorSharp} />
         </section>
     )
 }
