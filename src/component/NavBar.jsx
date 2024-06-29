@@ -64,27 +64,39 @@ export const NavBar = () => {
                                 Skills
                             </Nav.Link>
                             <Nav.Link
-                                href="#projects"
+                                href="#project"
                                 className={
-                                    activeLink === 'projects'
+                                    activeLink === 'project'
                                         ? 'active navbar-link'
                                         : 'navbar-link'
                                 }
-                                onClick={() => onUpdateActiveLink('projects')}
+                                onClick={() => onUpdateActiveLink('project')}
                             >
                                 Projects
                             </Nav.Link>
                         </Nav>
                         <span className="navbar-text">
                             <div className="social-icon">
-                                <a href="#">
-                                    <img src={navIcon1} alt="" />
+                                <a
+                                    href="https://www.linkedin.com/in/muhammad-aryandaru-b6569320b/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img src={navIcon1} alt="LinkedIn" />
                                 </a>
-                                <a href="#">
-                                    <img src={navIcon2} alt="" />
+                                <a
+                                    href="https://github.com/mdaffaaryandaru"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img src={navIcon2} alt="GitHub" />
                                 </a>
-                                <a href="#">
-                                    <img src={navIcon3} alt="" />
+                                <a
+                                    href="https://www.instagram.com/daffaryndru?"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img src={navIcon3} alt="Instagram" />
                                 </a>
                             </div>
                             <HashLink to="#connect">
