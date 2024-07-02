@@ -121,9 +121,16 @@ export const Contact = () => {
                                             )
                                         }
                                     />
-                                    <button type="submit">
+                                    <button type="submit" disabled>
                                         <span>{buttonText}</span>
                                     </button>
+                                    <p className="danger mt-3">
+                                        Sorry, the email function is under
+                                        maintenance because I have been working
+                                        in the backend service :( Please contact
+                                        me on other platforms. Thank you! -
+                                        Daffa
+                                    </p>
                                 </Col>
                                 {status.message && (
                                     <Col>

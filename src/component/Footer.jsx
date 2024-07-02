@@ -6,6 +6,16 @@ import {
 } from 'react-ionicons'
 
 export const Footer = () => {
+    const downloadPDF = () => {
+        const link = document.createElement('a')
+        link.href =
+            'https://drive.google.com/file/d/1aafnGsts6-MQb-uRtJ9vPEThKwD_fFmi/view?usp=sharing'
+        link.target = '_blank'
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+    }
+
     return (
         <footer>
             <ul className="social-icon-footer">
@@ -33,6 +43,9 @@ export const Footer = () => {
                     </a>
                 </li>
             </ul>
+            <button onClick={downloadPDF}>
+                <span>Download My CV</span>
+            </button>
             <p>
                 @2024 Muhammad Daffa Aryandaru | All Rights Reserved | Created
                 with &hearts;
