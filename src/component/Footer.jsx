@@ -9,7 +9,7 @@ export const Footer = () => {
     const downloadPDF = () => {
         const link = document.createElement('a')
         link.href =
-            'https://drive.google.com/file/d/1aafnGsts6-MQb-uRtJ9vPEThKwD_fFmi/view?usp=sharing'
+            'https://drive.google.com/file/d/1XSO2atXW3LNdaJgIviKR3A6MeToYa2aM/view?usp=sharing'
         link.target = '_blank'
         document.body.appendChild(link)
         link.click()
