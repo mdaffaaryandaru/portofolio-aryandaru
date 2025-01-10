@@ -2,37 +2,19 @@ import { Col, Container, Nav, Row, Tab } from 'react-bootstrap'
 import { ProjectsCard } from './ProjectsCard'
 import colorSharp2 from '../assets/img/color-sharp2.png'
 import projImg1 from '../assets/img/project-img1.png'
+import projImg2 from '../assets/img/project-img2.png'
 export const Projects = () => {
     const projects = [
         {
-            title: 'It Could Be Your  Project',
-            description: 'It Could Be Your Project',
+            title: 'Question Generate By Ai',
+            description:
+                'Generates questions based on the Enhanced Indonesian Spelling System dictionary using Flask and the React. ',
             imgUrl: projImg1,
         },
         {
-            title: 'It Could Be Your  Project',
-            description: 'It Could Be Your Project',
-            imgUrl: projImg1,
-        },
-        {
-            title: 'It Could Be Your  Project',
-            description: 'It Could Be Your Project',
-            imgUrl: projImg1,
-        },
-        {
-            title: 'It Could Be Your  Project',
-            description: 'It Could Be Your Project',
-            imgUrl: projImg1,
-        },
-        {
-            title: 'It Could Be Your  Project',
-            description: 'It Could Be Your Project',
-            imgUrl: projImg1,
-        },
-        {
-            title: 'It Could Be Your  Project',
-            description: 'It Could Be Your Project',
-            imgUrl: projImg1,
+            title: 'Kawula Cafe Landing Page',
+            description: 'Landing Page for Kawula Cafe using React.',
+            imgUrl: projImg2,
         },
     ]
 

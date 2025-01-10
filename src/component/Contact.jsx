@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import contactImg from '../assets/img/contact-img.svg'
+import emailjs from 'emailjs-com'
 
 export const Contact = () => {
     const formIntititalDetails = {
@@ -24,28 +25,43 @@ export const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         setButtonText('Sending...')
-        let response = await fetch('http://localhost:5000/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'Application/json;charset=utf-8',
-            },
-            body: JSON.stringify(formDetails),
-        })
-        setButtonText('Send')
-        let result = await response.json()
-        setFormDetails(formIntititalDetails)
-        if (result.code === 200) {
-            setStatus({
-                success: true,
-                message: 'Message sent',
-            })
-        } else {
-            setStatus({
-                success: false,
-                message: 'Message not sent',
-            })
+
+        const templateParams = {
+            from_name: `${formDetails.firstName} ${formDetails.lastName}`,
+            from_email: formDetails.email,
+            phone: formDetails.phone,
+            message: formDetails.message,
+            to_email: 'daffaaryandaru100815@gmail.com',
         }
+
+        emailjs
+            .send(
+                process.env.REACT_APP_SERVICE_ID,
+                process.env.REACT_APP_TEMPLATE_ID,
+                templateParams,
+                process.env.REACT_APP_USER_ID
+            )
+            .then(
+                (response) => {
+                    console.log('SUCCESS!', response.status, response.text)
+                    setButtonText('Send')
+                    setFormDetails(formIntititalDetails)
+                    setStatus({
+                        success: true,
+                        message: 'Message sent',
+                    })
+                },
+                (error) => {
+                    console.log('FAILED...', error)
+                    setButtonText('Send')
+                    setStatus({
+                        success: false,
+                        message: 'Message not sent',
+                    })
+                }
+            )
     }
+
     return (
         <section className="contact" id="connect">
             <Container>
@@ -111,9 +127,9 @@ export const Contact = () => {
                                 </Col>
                                 <Col>
                                     <textarea
-                                        row="6"
+                                        rows="6"
                                         value={formDetails.message}
-                                        placeholder="message"
+                                        placeholder="Message"
                                         onChange={(e) =>
                                             onFormUpdate(
                                                 'message',
@@ -121,16 +137,9 @@ export const Contact = () => {
                                             )
                                         }
                                     />
-                                    <button type="submit" disabled>
+                                    <button type="submit">
                                         <span>{buttonText}</span>
                                     </button>
-                                    <p className="danger mt-3">
-                                        Sorry, the email function is under
-                                        maintenance because I have been working
-                                        in the backend service :( Please contact
-                                        me on other platforms. Thank you! -
-                                        Daffa
-                                    </p>
                                 </Col>
                                 {status.message && (
                                     <Col>
