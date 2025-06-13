@@ -53,17 +53,18 @@ export const Banner = () => {
                             <span className="wrap">{text}</span>
                         </h1>
                         <p>
-                            My name is Muhammad Daffa Aryandaru. I am a Website
-                            Developer with over 2 years of experience in the
-                            technology industry. Skilled in designing and
-                            developing responsive and user-friendly websites
-                            using HTML, CSS, and JavaScript. I also have a good
-                            understanding of server-side development using
-                            programming languages such as TypeScript and
-                            JavaScript. I have a high enthusiasm for learning
-                            and continuously developing my skills in web
-                            development. Committed to producing quality products
-                            and completing tasks on time.
+                            Fullstack Software Engineer with over 3 years of
+                            hands-on experience in building end-to-end web
+                            applications. Proficient in fullstack development
+                            using modern frameworks such as React.js, Next.js,
+                            NestJS, and Hapi.js. Experienced in designing
+                            scalable architectures, integrating APIs, and
+                            optimizing performance across the stack. Adept at
+                            turning complex requirements into reliable,
+                            maintainable, and user-friendly solutions.
+                            Passionate about continuous improvement, clean code,
+                            and delivering high-impact digital products on time
+                            and within scope.
                         </p>
                     </Col>
                     <Col xs={12} md={6} xl={5}>

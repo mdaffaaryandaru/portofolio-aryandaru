@@ -3,6 +3,10 @@ import { ProjectsCard } from './ProjectsCard'
 import colorSharp2 from '../assets/img/color-sharp2.png'
 import projImg1 from '../assets/img/project-img1.png'
 import projImg2 from '../assets/img/project-img2.png'
+import projImg3 from '../assets/img/project-img3.png'
+import projImg4 from '../assets/img/project-img4.png'
+import projImg5 from '../assets/img/project-img5.png'
+import projImg6 from '../assets/img/project-img6.png'
 export const Projects = () => {
     const projects = [
         {
@@ -12,9 +16,31 @@ export const Projects = () => {
             imgUrl: projImg1,
         },
         {
-            title: 'Kawula Cafe Landing Page',
-            description: 'Landing Page for Kawula Cafe using React.',
+            title: 'Kawula Cafe',
+            description: 'Landing Page for Kawula Cafe using Next JS.',
             imgUrl: projImg2,
+        },
+        {
+            title: 'Masjid Baiturrahim',
+            description: 'Website for Masjid Baiturrahim using React with CMS',
+            imgUrl: projImg3,
+        },
+    ]
+    const projects1 = [
+        {
+            title: 'Draft Genix Team Randomizer',
+            description: 'Website for Custom Team Randomizer',
+            imgUrl: projImg4,
+        },
+        {
+            title: 'Oasys Company Management',
+            description: 'Website With Joget DX that included HRIS and Project Management ',
+            imgUrl: projImg5,
+        },
+        {
+            title: 'ISTW Digital Signature',
+            description: 'Website With Joget DX for digital signature ',
+            imgUrl: projImg6,
         },
     ]
 
@@ -69,7 +95,7 @@ export const Projects = () => {
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
                                     <Row>
-                                        {projects.map((project, index) => {
+                                        {projects1.map((project, index) => {
                                             return (
                                                 <ProjectsCard
                                                     key={index}
@@ -79,7 +105,7 @@ export const Projects = () => {
                                         })}
                                     </Row>
                                 </Tab.Pane>
-                                <Tab.Pane eventKey="third">
+                                {/* <Tab.Pane eventKey="third">
                                     <Row>
                                         {projects.map((project, index) => {
                                             return (
@@ -90,7 +116,7 @@ export const Projects = () => {
                                             )
                                         })}
                                     </Row>
-                                </Tab.Pane>
+                                </Tab.Pane> */}
                             </Tab.Content>
                         </Tab.Container>
                     </Col>
