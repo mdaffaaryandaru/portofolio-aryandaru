@@ -69,6 +69,15 @@
     padding: 0 15px;
 }
 
+.proficiency-badge {
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1.5px solid;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+}
+
 .skill-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -77,6 +86,9 @@
     transition: all 0.3s;
     position: relative;
     z-index: 2;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .skill-card:hover {
@@ -175,6 +187,57 @@
     }
 
     .skills-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+        padding: 0 15px;
+    }
+}
+
+/* Add these styles to make the categories display vertically */
+.categories-column {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding-right: 15px;
+}
+
+.skill-categories-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.category-btn-vertical {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: left;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.category-btn-vertical:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.category-btn-vertical.active {
+    background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .categories-column {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 20px;
+        padding-bottom: 20px;
     }
 }
