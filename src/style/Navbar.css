@@ -1,0 +1,44 @@
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    cursor: pointer;
+}
+
+.logo-first {
+    background: linear-gradient(90deg, #aa367c 0%, #4a2fbd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo-last {
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo-text::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, #aa367c 0%, #4a2fbd 100%);
+    transition: width 0.3s ease-in-out;
+}
+
+.logo-text:hover::after {
+    width: 100%;
+}
+
+.logo-text:hover .logo-first {
+    text-shadow: 0 0 10px rgba(170, 54, 124, 0.5);
+    transform: translateY(-2px);
+}
+
+.logo-text:hover .logo-last {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
